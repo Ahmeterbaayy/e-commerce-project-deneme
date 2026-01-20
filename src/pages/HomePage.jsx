@@ -6,6 +6,8 @@ import summerBanner1 from "../assets/images/header-img/summer-banner1.png";
 import homeBanner from "../assets/images/header-img/home-banner.jpg";
 import arrowRight from "../assets/images/featured-img/arrow-right.png";
 import arrowLeft from "../assets/images/featured-img/arrow-left.png";
+import summerBannerPng from "../assets/images/header-img/summer-banner.png";
+import neuralBanner from "../assets/images/header-img/neural-banner.png";
 import menImg from "../assets/images/shopping-img/men.jpg";
 import womenImg from "../assets/images/shopping-img/women.jpg";
 import accessoriesImg from "../assets/images/shopping-img/accessories.jpg";
@@ -366,7 +368,7 @@ export default function HomePage() {
             <div className="h-[80px] md:h-[120px]" />
           </div>
           <div className="w-full flex justify-center absolute left-0 right-0" style={{bottom:0}}>
-            <img src="/src/assets/images/header-img/summer-banner.png" alt="model" className="w-[320px] h-auto z-0" style={{maxWidth:'90vw'}} />
+            <img src={summerBannerPng} alt="model" className="w-[320px] h-auto z-0" style={{maxWidth:'90vw'}} />
           </div>
         </div>
 
@@ -405,7 +407,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className="flex w-full md:w-[510px] flex-col items-center shrink-0 flex-nowrap relative overflow-hidden">
-                    <div className="w-full md:w-[443px] h-[400px] md:h-[685px] shrink-0 bg-[url(/src/assets/images/header-img/summer-banner.png)] bg-cover bg-center md:bg-top bg-no-repeat relative" />
+                    <div className="w-full md:w-[443px] h-[400px] md:h-[685px] shrink-0 bg-cover bg-center md:bg-top bg-no-repeat relative" style={{backgroundImage: `url(${summerBannerPng})`}} />
                   </div>
                 </div>
               </div>
@@ -427,12 +429,12 @@ export default function HomePage() {
               <span className="text-[#727272] text-center text-base mb-6 max-w-[300px]">We know how large objects will act, but things on a small scale.</span>
               <button className="w-[180px] h-[48px] bg-[#23a6f0] rounded-[7px] text-white font-bold text-base mb-3">BUY NOW</button>
               <button className="w-[180px] h-[48px] border border-[#23a6f0] rounded-[7px] text-[#23a6f0] font-bold text-base mb-6">Learn More</button>
-              <img src="/src/assets/images/header-img/neural-banner.png" alt="neural" className="w-[320px] h-auto object-contain mb-0" style={{maxWidth:'90vw'}} />
+              <img src={neuralBanner} alt="neural" className="w-[320px] h-auto object-contain mb-0" style={{maxWidth:'90vw'}} />
             </div>
             <div className="hidden md:block w-full h-auto md:h-[682px] shrink-0 bg-[#fff] relative overflow-hidden">
               <div className="flex w-full items-center flex-col md:flex-row flex-nowrap relative overflow-hidden">
                 <div className="w-full md:w-[50%] h-[400px] md:h-[682px] shrink-0 relative overflow-hidden">
-                  <img src="/src/assets/images/header-img/neural-banner.png" alt="" className="w-full h-full object-cover object-center" />
+                  <img src={neuralBanner} alt="" className="w-full h-full object-cover object-center" />
                 </div>
                 <div className="flex flex-1 flex-col gap-[20px] md:gap-[30px] justify-center items-start flex-nowrap relative px-[24px] md:px-[80px] py-[50px] md:py-0">
                   <span className="h-[24px] shrink-0 basis-auto font-['Montserrat'] text-[16px] font-bold leading-[24px] text-[#bdbdbd] tracking-[0.1px] relative text-left whitespace-nowrap">
