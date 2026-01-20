@@ -2,6 +2,14 @@ import React from "react";
 import staticImg from "../assets/images/featured-img/static.png";
 import carouselCaptions1 from "../assets/images/header-img/carouselCaptions1.png";
 import carouselCaptions2 from "../assets/images/header-img/carouselCaptions2.png";
+import summerBanner1 from "../assets/images/header-img/summer-banner1.png";
+import homeBanner from "../assets/images/header-img/home-banner.jpg";
+import arrowRight from "../assets/images/featured-img/arrow-right.png";
+import arrowLeft from "../assets/images/featured-img/arrow-left.png";
+import menImg from "../assets/images/shopping-img/men.jpg";
+import womenImg from "../assets/images/shopping-img/women.jpg";
+import accessoriesImg from "../assets/images/shopping-img/accessories.jpg";
+import kidsImg from "../assets/images/shopping-img/kids.jpg";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -15,107 +23,107 @@ import ProductCard from "../components/ProductCard";
 export default function HomePage() {
   const products = [
     {
-      image: "/src/assets/images/product-img/product9.jpg",
+      image: require("../assets/images/product-img/product9.jpg"),
       title: "Graphic Design",
       department: "English Department",
       originalPrice: "16.48",
       salePrice: "6.48",
       colors: [
-        "/src/assets/images/product-img/mavi.png",
-        "/src/assets/images/product-img/yesil.png",
-        "/src/assets/images/product-img/turuncu.png",
-        "/src/assets/images/product-img/koyu.png"
+        require("../assets/images/product-img/mavi.png"),
+        require("../assets/images/product-img/yesil.png"),
+        require("../assets/images/product-img/turuncu.png"),
+        require("../assets/images/product-img/koyu.png")
       ]
     },
     {
-      image: "/src/assets/images/product-img/product10.jpg",
+      image: require("../assets/images/product-img/product10.jpg"),
       title: "Graphic Design",
       department: "English Department",
       originalPrice: "16.48",
       salePrice: "6.48",
       colors: [
-        "/src/assets/images/product-img/mavi.png",
-        "/src/assets/images/product-img/yesil.png",
-        "/src/assets/images/product-img/turuncu.png",
-        "/src/assets/images/product-img/koyu.png"
+        require("../assets/images/product-img/mavi.png"),
+        require("../assets/images/product-img/yesil.png"),
+        require("../assets/images/product-img/turuncu.png"),
+        require("../assets/images/product-img/koyu.png")
       ]
     },
     {
-      image: "/src/assets/images/product-img/product11.jpg",
+      image: require("../assets/images/product-img/product11.jpg"),
       title: "Graphic Design",
       department: "English Department",
       originalPrice: "16.48",
       salePrice: "6.48",
       colors: [
-        "/src/assets/images/product-img/mavi.png",
-        "/src/assets/images/product-img/yesil.png",
-        "/src/assets/images/product-img/turuncu.png",
-        "/src/assets/images/product-img/koyu.png"
+        require("../assets/images/product-img/mavi.png"),
+        require("../assets/images/product-img/yesil.png"),
+        require("../assets/images/product-img/turuncu.png"),
+        require("../assets/images/product-img/koyu.png")
       ]
     },
     {
-      image: "/src/assets/images/product-img/product12.jpg",
+      image: require("../assets/images/product-img/product12.jpg"),
       title: "Graphic Design",
       department: "English Department",
       originalPrice: "16.48",
       salePrice: "6.48",
       colors: [
-        "/src/assets/images/product-img/mavi.png",
-        "/src/assets/images/product-img/yesil.png",
-        "/src/assets/images/product-img/turuncu.png",
-        "/src/assets/images/product-img/koyu.png"
+        require("../assets/images/product-img/mavi.png"),
+        require("../assets/images/product-img/yesil.png"),
+        require("../assets/images/product-img/turuncu.png"),
+        require("../assets/images/product-img/koyu.png")
       ]
     },
     {
-      image: "/src/assets/images/product-img/product13.jpg",
+      image: require("../assets/images/product-img/product13.jpg"),
       title: "Graphic Design",
       department: "English Department",
       originalPrice: "16.48",
       salePrice: "6.48",
       colors: [
-        "/src/assets/images/product-img/mavi.png",
-        "/src/assets/images/product-img/yesil.png",
-        "/src/assets/images/product-img/turuncu.png",
-        "/src/assets/images/product-img/koyu.png"
+        require("../assets/images/product-img/mavi.png"),
+        require("../assets/images/product-img/yesil.png"),
+        require("../assets/images/product-img/turuncu.png"),
+        require("../assets/images/product-img/koyu.png")
       ]
     },
     {
-      image: "/src/assets/images/product-img/product14.jpg",
+      image: require("../assets/images/product-img/product14.jpg"),
       title: "Graphic Design",
       department: "English Department",
       originalPrice: "16.48",
       salePrice: "6.48",
       colors: [
-        "/src/assets/images/product-img/mavi.png",
-        "/src/assets/images/product-img/yesil.png",
-        "/src/assets/images/product-img/turuncu.png",
-        "/src/assets/images/product-img/koyu.png"
+        require("../assets/images/product-img/mavi.png"),
+        require("../assets/images/product-img/yesil.png"),
+        require("../assets/images/product-img/turuncu.png"),
+        require("../assets/images/product-img/koyu.png")
       ]
     },
     {
-      image: "/src/assets/images/product-img/product8.jpg",
+      image: require("../assets/images/product-img/product8.jpg"),
       title: "Graphic Design",
       department: "English Department",
       originalPrice: "16.48",
       salePrice: "6.48",
       colors: [
-        "/src/assets/images/product-img/mavi.png",
-        "/src/assets/images/product-img/yesil.png",
-        "/src/assets/images/product-img/turuncu.png",
-        "/src/assets/images/product-img/koyu.png"
+        require("../assets/images/product-img/mavi.png"),
+        require("../assets/images/product-img/yesil.png"),
+        require("../assets/images/product-img/turuncu.png"),
+        require("../assets/images/product-img/koyu.png")
       ]
     },
     {
-      image: "/src/assets/images/product-img/product15.jpg",
+      image: require("../assets/images/product-img/product15.jpg"),
       title: "Graphic Design",
       department: "English Department",
       originalPrice: "16.48",
       salePrice: "6.48",
       colors: [
-        "/src/assets/images/product-img/mavi.png",
-        "/src/assets/images/product-img/yesil.png",
-        "/src/assets/images/product-img/turuncu.png",
-        "/src/assets/images/product-img/koyu.png"
+        require("../assets/images/product-img/mavi.png"),
+        require("../assets/images/product-img/yesil.png"),
+        require("../assets/images/product-img/turuncu.png"),
+        require("../assets/images/product-img/koyu.png")
       ]
     }
   ];
@@ -127,7 +135,7 @@ export default function HomePage() {
       <div className="w-full md:h-[852px] shrink-0 bg-[#f9f9f9] relative overflow-hidden">
         {/* Masaüstü (md ve üzeri) */}
         <div className="hidden md:block w-full h-[747px] absolute top-0 left-0 overflow-hidden z-[1]">
-          <div className="bg-[url(/src/assets/images/header-img/summer-banner1.png)] bg-cover bg-no-repeat absolute top-0 bottom-0 left-0 right-0 z-[2]" />
+          <div className="bg-cover bg-no-repeat absolute top-0 bottom-0 left-0 right-0 z-[2]" style={{backgroundImage: `url(${summerBanner1})`}} />
           <div className="bg-[rgba(0,0,0,0.5)] absolute top-0 bottom-0 left-0 right-0 overflow-hidden z-[3]" />
         </div>
         <div className="h-[60px] sm:h-[136px] bg-[#fff] absolute top-0 left-0 right-0 z-[150]">
@@ -179,28 +187,28 @@ export default function HomePage() {
                       <div className="hidden md:flex w-[415px] h-[280px] pt-0 pr-0 pb-0 pl-0 flex-col items-start shrink-0 flex-nowrap relative overflow-hidden z-[86]" />
                     </div>
                   </div>
-                  <div className="bg-[url(/src/assets/images/header-img/home-banner.jpg)] bg-cover bg-no-repeat bg-[position:center_-80px] absolute top-0 bottom-0 left-0 right-0 overflow-hidden z-[76]" />
+                  <div className="bg-cover bg-no-repeat bg-[position:center_-80px] absolute top-0 bottom-0 left-0 right-0 overflow-hidden z-[76]" style={{backgroundImage: `url(${homeBanner})`}} />
                 </div>
               </div>
             </SwiperSlide>
           </Swiper>
-          <div className="w-[126px] h-[10px] bg-[url(/src/assets/images/featured-img/static.png)] bg-cover bg-no-repeat absolute bottom-[59px] left-[63px] z-[87] swiper-pagination-custom" />
+          <div className="w-[126px] h-[10px] bg-cover bg-no-repeat absolute bottom-[59px] left-[63px] z-[87] swiper-pagination-custom" style={{backgroundImage: `url(${staticImg})`}} />
           <div className="absolute bottom-[59px] left-1/2 -translate-x-1/2 z-[88] flex flex-row items-end">
             <img src={carouselCaptions2} alt="carouselCaptions2" className="w-[63px] h-[10px] m-0 p-0" />
             <img src={carouselCaptions1} alt="carouselCaptions1" className="w-[63px] h-[10px] m-0 p-0" />
           </div>
           <div className="w-[24px] h-[44.471px] absolute top-[282px] right-[39px] overflow-hidden z-[88] swiper-button-next-custom cursor-pointer">
-            <div className="w-[24px] h-[44.471px] bg-[url(/src/assets/images/featured-img/arrow-right.png)] bg-cover bg-no-repeat absolute top-1/2 right-0 translate-x-0 translate-y-[-50%] overflow-hidden z-[89]" />
+            <div className="w-[24px] h-[44.471px] bg-cover bg-no-repeat absolute top-1/2 right-0 translate-x-0 translate-y-[-50%] overflow-hidden z-[89]" style={{backgroundImage: `url(${arrowRight})`}} />
           </div>
           <div className="w-[24px] h-[44.471px] absolute top-[282px] left-[39px] overflow-hidden z-[90] swiper-button-prev-custom cursor-pointer">
-            <div className="w-[24px] h-[44.471px] bg-[url(/src/assets/images/featured-img/arrow-left.png)] bg-cover bg-no-repeat relative overflow-hidden z-[91] mt-0 mr-0 mb-0 ml-0" />
+            <div className="w-[24px] h-[44.471px] bg-cover bg-no-repeat relative overflow-hidden z-[91] mt-0 mr-0 mb-0 ml-0" style={{backgroundImage: `url(${arrowLeft})`}} />
           </div>
         </div>
         {/* Mobil için referans projeye uygun swipe edilebilir banner */}
         <div className="block md:hidden w-full h-[500px] bg-[#fff] rounded-[5px] border-solid border border-[#dedede] mt-[180px] flex items-center justify-center relative z-[73] overflow-hidden">
           <div className="w-full h-full relative flex items-center justify-center">
             {/* Banner arka planı sağdan model görünecek şekilde */}
-            <div className="absolute inset-0 w-full h-full bg-cover bg-no-repeat" style={{backgroundImage: 'url(/src/assets/images/header-img/home-banner.jpg)', backgroundPosition: '35% center'}}></div>
+            <div className="absolute inset-0 w-full h-full bg-cover bg-no-repeat" style={{backgroundImage: `url(${homeBanner})`, backgroundPosition: '35% center'}}></div>
             {/* Slider okları */}
             <button className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-transparent border-none p-0 m-0">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -239,28 +247,28 @@ export default function HomePage() {
           </div>
           {/* MEN */}
           <div className="w-full bg-white flex flex-col items-center justify-center relative mb-4">
-            <img src="/src/assets/images/shopping-img/men.jpg" alt="MEN" className="w-full h-auto object-cover" />
+            <img src={menImg} alt="MEN" className="w-full h-auto object-cover" />
             <div className="absolute left-1/2 -translate-x-1/2 bottom-6 bg-white px-8 py-2 rounded-none shadow text-center">
               <span className="text-[#252b42] font-bold text-lg tracking-widest uppercase">MEN</span>
             </div>
           </div>
           {/* WOMEN */}
           <div className="w-full bg-white flex flex-col items-center justify-center relative mb-4">
-            <img src="/src/assets/images/shopping-img/women.jpg" alt="WOMEN" className="w-full h-auto object-cover" />
+            <img src={womenImg} alt="WOMEN" className="w-full h-auto object-cover" />
             <div className="absolute left-1/2 -translate-x-1/2 bottom-6 bg-white px-8 py-2 rounded-none shadow text-center">
               <span className="text-[#252b42] font-bold text-lg tracking-widest uppercase">WOMEN</span>
             </div>
           </div>
           {/* ACCESSORIES */}
           <div className="w-full bg-white flex flex-col items-center justify-center relative mb-4">
-            <img src="/src/assets/images/shopping-img/accessories.jpg" alt="ACCESSORIES" className="w-full h-auto object-cover" />
+            <img src={accessoriesImg} alt="ACCESSORIES" className="w-full h-auto object-cover" />
             <div className="absolute left-1/2 -translate-x-1/2 bottom-6 bg-white px-8 py-2 rounded-none shadow text-center">
               <span className="text-[#252b42] font-bold text-lg tracking-widest uppercase">ACCESSORIES</span>
             </div>
           </div>
           {/* KIDS */}
           <div className="w-full bg-white flex flex-col items-center justify-center relative mb-4">
-            <img src="/src/assets/images/shopping-img/kids.jpg" alt="KIDS" className="w-full h-auto object-cover" />
+            <img src={kidsImg} alt="KIDS" className="w-full h-auto object-cover" />
             <div className="absolute left-1/2 -translate-x-1/2 bottom-6 bg-white px-8 py-2 rounded-none shadow text-center">
               <span className="text-[#252b42] font-bold text-lg tracking-widest uppercase">KIDS</span>
             </div>
@@ -289,8 +297,8 @@ export default function HomePage() {
                     </span>
                   </div>
                   <div className="absolute top-0 bottom-0 left-0 right-0 overflow-hidden">
-                    <div className="w-full h-full bg-[rgba(33,33,33,0.05)] bg-[url(/src/assets/images/shopping-img/men.jpg)] bg-cover bg-no-repeat relative overflow-hidden mt-0 mr-0 mb-0 ml-px" />
-                    <div className="bg-[url(/src/assets/images/shopping-img/men.jpg)] bg-cover bg-no-repeat absolute top-0 bottom-0 left-0 right-0 overflow-hidden" />
+                    <div className="w-full h-full bg-[rgba(33,33,33,0.05)] bg-cover bg-no-repeat relative overflow-hidden mt-0 mr-0 mb-0 ml-px" style={{backgroundImage: `url(${menImg})`}} />
+                    <div className="bg-cover bg-no-repeat absolute top-0 bottom-0 left-0 right-0 overflow-hidden" style={{backgroundImage: `url(${menImg})`}} />
                   </div>
                 </div>
               </div>
@@ -303,8 +311,8 @@ export default function HomePage() {
                     </span>
                   </div>
                   <div className="absolute top-0 bottom-0 left-0 right-0 overflow-hidden">
-                    <div className="w-full h-full bg-[rgba(33,33,33,0.05)] bg-[url(/src/assets/images/shopping-img/women.jpg)] bg-cover bg-top bg-no-repeat relative overflow-hidden mt-0 mr-0 mb-0 ml-px" />
-                    <div className="bg-[url(/src/assets/images/shopping-img/women.jpg)] bg-cover bg-top bg-no-repeat absolute top-0 bottom-0 left-0 right-0 overflow-hidden group cursor-pointer transition-all duration-200 hover:scale-105 hover:shadow-lg" />
+                    <div className="w-full h-full bg-[rgba(33,33,33,0.05)] bg-cover bg-top bg-no-repeat relative overflow-hidden mt-0 mr-0 mb-0 ml-px" style={{backgroundImage: `url(${womenImg})`}} />
+                    <div className="bg-cover bg-top bg-no-repeat absolute top-0 bottom-0 left-0 right-0 overflow-hidden group cursor-pointer transition-all duration-200 hover:scale-105 hover:shadow-lg" style={{backgroundImage: `url(${womenImg})`}} />
                   </div>
                 </div>
               </div>
@@ -317,8 +325,8 @@ export default function HomePage() {
                     </span>
                   </div>
                   <div className="absolute top-0 bottom-0 left-0 right-0 overflow-hidden">
-                    <div className="w-full h-full bg-[rgba(33,33,33,0.05)] bg-[url(/src/assets/images/shopping-img/accessories.jpg)] bg-cover bg-no-repeat relative overflow-hidden mt-0 mr-0 mb-0 ml-px" />
-                    <div className="bg-[url(/src/assets/images/shopping-img/accessories.jpg)] bg-cover bg-no-repeat absolute top-0 bottom-0 left-0 right-0 overflow-hidden group cursor-pointer transition-all duration-200 hover:scale-105 hover:shadow-lg" />
+                    <div className="w-full h-full bg-[rgba(33,33,33,0.05)] bg-cover bg-no-repeat relative overflow-hidden mt-0 mr-0 mb-0 ml-px" style={{backgroundImage: `url(${accessoriesImg})`}} />
+                    <div className="bg-cover bg-no-repeat absolute top-0 bottom-0 left-0 right-0 overflow-hidden group cursor-pointer transition-all duration-200 hover:scale-105 hover:shadow-lg" style={{backgroundImage: `url(${accessoriesImg})`}} />
                   </div>
                 </div>
               </div>
@@ -331,8 +339,8 @@ export default function HomePage() {
                     </span>
                   </div>
                   <div className="absolute top-0 bottom-0 left-0 right-0 overflow-hidden">
-                    <div className="w-full h-full bg-[rgba(33,33,33,0.05)] bg-[url(/src/assets/images/shopping-img/kids.jpg)] bg-cover bg-no-repeat relative overflow-hidden mt-0 mr-0 mb-0 ml-px" />
-                    <div className="bg-[url(/src/assets/images/shopping-img/kids.jpg)] bg-cover bg-no-repeat absolute top-0 bottom-0 left-0 right-0 overflow-hidden group cursor-pointer transition-all duration-200 hover:scale-105 hover:shadow-lg" />
+                    <div className="w-full h-full bg-[rgba(33,33,33,0.05)] bg-cover bg-no-repeat relative overflow-hidden mt-0 mr-0 mb-0 ml-px" style={{backgroundImage: `url(${kidsImg})`}} />
+                    <div className="bg-cover bg-no-repeat absolute top-0 bottom-0 left-0 right-0 overflow-hidden group cursor-pointer transition-all duration-200 hover:scale-105 hover:shadow-lg" style={{backgroundImage: `url(${kidsImg})`}} />
                   </div>
                 </div>
               </div>

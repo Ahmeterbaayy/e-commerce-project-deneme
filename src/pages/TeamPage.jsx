@@ -1,54 +1,70 @@
+
 import React from "react";
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
 import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+// Görselleri import et
+import personal1 from "../assets/images/teamPage-img/personal1.jpg";
+import personal2 from "../assets/images/teamPage-img/personal2.jpg";
+import personal3 from "../assets/images/teamPage-img/personal3.jpg";
+import personal4 from "../assets/images/teamPage-img/personal4.jpg";
+import personal5 from "../assets/images/teamPage-img/personal5.jpg";
+import personal6 from "../assets/images/teamPage-img/personal6.jpg";
+import personal7 from "../assets/images/teamPage-img/personal7.jpg";
+import personal8 from "../assets/images/teamPage-img/personal8.jpg";
+import personal9 from "../assets/images/teamPage-img/personal9.jpg";
+import teamleft from "../assets/images/teamPage-img/teamleft.jpg";
+import teamright1 from "../assets/images/teamPage-img/teamright1.jpg";
+import teamright2 from "../assets/images/teamPage-img/teamright2.jpg";
+import teamright3 from "../assets/images/teamPage-img/teamright3.jpg";
+import teamright4 from "../assets/images/teamPage-img/teamright4.jpg";
 
 export default function TeamPage() {
   const teamMembers = [
     {
       name: "Username",
       profession: "Profession",
-      image: "/src/assets/images/teamPage-img/personal1.jpg"
+      image: personal1
     },
     {
       name: "Username",
       profession: "Profession",
-      image: "/src/assets/images/teamPage-img/personal2.jpg"
+      image: personal2
     },
     {
       name: "Username",
       profession: "Profession",
-      image: "/src/assets/images/teamPage-img/personal3.jpg"
+      image: personal3
     },
     {
       name: "Username",
       profession: "Profession", 
-      image: "/src/assets/images/teamPage-img/personal4.jpg"
+      image: personal4
     },
     {
       name: "Username",
       profession: "Profession",
-      image: "/src/assets/images/teamPage-img/personal5.jpg"
+      image: personal5
     },
     {
       name: "Username",
       profession: "Profession",
-      image: "/src/assets/images/teamPage-img/personal6.jpg"
+      image: personal6
     },
     {
       name: "Username",
       profession: "Profession",
-      image: "/src/assets/images/teamPage-img/personal7.jpg"
+      image: personal7
     },
     {
       name: "Username",
       profession: "Profession",
-      image: "/src/assets/images/teamPage-img/personal8.jpg"
+      image: personal8
     },
     {
       name: "Username",
       profession: "Profession",
-      image: "/src/assets/images/teamPage-img/personal9.jpg"
+      image: personal9
     }
   ];
 
@@ -109,25 +125,25 @@ export default function TeamPage() {
       <div className="block md:hidden w-full bg-[#fff] relative overflow-hidden z-[38] py-6">
         {/* Üstte büyük görsel */}
         <div className="w-full flex justify-center mb-0">
-          <img src="/src/assets/images/teamPage-img/teamleft.jpg" alt="Main" className="w-[90vw] max-w-[400px] h-auto rounded-lg object-cover" />
+          <img src={teamleft} alt="Main" className="w-[90vw] max-w-[400px] h-auto rounded-lg object-cover" />
         </div>
         {/* Altta 2x2 grid küçük görseller */}
         <div className="grid grid-cols-2 gap-3 px-4">
-          <img src="/src/assets/images/teamPage-img/teamright1.jpg" alt="Alt1" className="w-full h-[120px] object-cover rounded-lg" />
-          <img src="/src/assets/images/teamPage-img/teamright2.jpg" alt="Alt2" className="w-full h-[120px] object-cover rounded-lg" />
-          <img src="/src/assets/images/teamPage-img/teamright3.jpg" alt="Alt3" className="w-full h-[120px] object-cover rounded-lg" />
-          <img src="/src/assets/images/teamPage-img/teamright4.jpg" alt="Alt4" className="w-full h-[120px] object-cover rounded-lg" />
+          <img src={teamright1} alt="Alt1" className="w-full h-[120px] object-cover rounded-lg" />
+          <img src={teamright2} alt="Alt2" className="w-full h-[120px] object-cover rounded-lg" />
+          <img src={teamright3} alt="Alt3" className="w-full h-[120px] object-cover rounded-lg" />
+          <img src={teamright4} alt="Alt4" className="w-full h-[120px] object-cover rounded-lg" />
         </div>
       </div>
       {/* Webde mevcut image gallery */}
       <div className="hidden md:block w-full h-[530px] shrink-0 bg-[#fff] relative overflow-hidden z-[38]">
         <div className="h-[530px] absolute top-0 left-0 right-0 overflow-hidden z-[39]">
           <div className="w-[1440px] h-[530px] absolute top-0 left-1/2 translate-x-[-50%] overflow-hidden z-40">
-            <div className="w-[700px] h-[530px] bg-[url(/src/assets/images/teamPage-img/teamleft.jpg)] bg-cover bg-no-repeat absolute top-0 left-0 z-[41] transition-all duration-300 hover:shadow-2xl hover:scale-105 active:shadow-2xl active:scale-100 focus:shadow-2xl focus:scale-100 cursor-pointer outline-none" tabIndex={0} />
-            <div className="w-[361px] h-[260px] bg-[url(/src/assets/images/teamPage-img/teamright1.jpg)] bg-cover bg-no-repeat absolute top-0 left-[709px] z-[42] transition-all duration-300 hover:shadow-2xl hover:scale-105 active:shadow-2xl active:scale-100 focus:shadow-2xl focus:scale-100 cursor-pointer outline-none" tabIndex={0} />
-            <div className="w-[361px] h-[260px] bg-[url(/src/assets/images/teamPage-img/teamright2.jpg)] bg-cover bg-no-repeat absolute top-0 left-[1079px] z-[44] transition-all duration-300 hover:shadow-2xl hover:scale-105 active:shadow-2xl active:scale-100 focus:shadow-2xl focus:scale-100 cursor-pointer outline-none" tabIndex={0} />
-            <div className="w-[361px] h-[260px] bg-[url(/src/assets/images/teamPage-img/teamright3.jpg)] bg-cover bg-no-repeat absolute top-[270px] left-[709px] z-[43] transition-all duration-300 hover:shadow-2xl hover:scale-105 active:shadow-2xl active:scale-100 focus:shadow-2xl focus:scale-100 cursor-pointer outline-none" tabIndex={0} />
-            <div className="w-[361px] h-[260px] bg-[url(/src/assets/images/teamPage-img/teamright4.jpg)] bg-cover bg-no-repeat absolute top-[270px] left-[1079px] z-[45] transition-all duration-300 hover:shadow-2xl hover:scale-105 active:shadow-2xl active:scale-100 focus:shadow-2xl focus:scale-100 cursor-pointer outline-none" tabIndex={0} />
+            <div className="w-[700px] h-[530px] bg-cover bg-no-repeat absolute top-0 left-0 z-[41] transition-all duration-300 hover:shadow-2xl hover:scale-105 active:shadow-2xl active:scale-100 focus:shadow-2xl focus:scale-100 cursor-pointer outline-none" tabIndex={0} style={{backgroundImage: `url(${teamleft})`}} />
+            <div className="w-[361px] h-[260px] bg-cover bg-no-repeat absolute top-0 left-[709px] z-[42] transition-all duration-300 hover:shadow-2xl hover:scale-105 active:shadow-2xl active:scale-100 focus:shadow-2xl focus:scale-100 cursor-pointer outline-none" tabIndex={0} style={{backgroundImage: `url(${teamright1})`}} />
+            <div className="w-[361px] h-[260px] bg-cover bg-no-repeat absolute top-0 left-[1079px] z-[44] transition-all duration-300 hover:shadow-2xl hover:scale-105 active:shadow-2xl active:scale-100 focus:shadow-2xl focus:scale-100 cursor-pointer outline-none" tabIndex={0} style={{backgroundImage: `url(${teamright2})`}} />
+            <div className="w-[361px] h-[260px] bg-cover bg-no-repeat absolute top-[270px] left-[709px] z-[43] transition-all duration-300 hover:shadow-2xl hover:scale-105 active:shadow-2xl active:scale-100 focus:shadow-2xl focus:scale-100 cursor-pointer outline-none" tabIndex={0} style={{backgroundImage: `url(${teamright3})`}} />
+            <div className="w-[361px] h-[260px] bg-cover bg-no-repeat absolute top-[270px] left-[1079px] z-[45] transition-all duration-300 hover:shadow-2xl hover:scale-105 active:shadow-2xl active:scale-100 focus:shadow-2xl focus:scale-100 cursor-pointer outline-none" tabIndex={0} style={{backgroundImage: `url(${teamright4})`}} />
           </div>
         </div>
       </div>
