@@ -112,7 +112,11 @@ export default function PricingPage() {
               <span className="flex w-[71px] h-[24px] justify-center items-start shrink-0 basis-auto font-['Montserrat'] text-[16px] font-bold leading-[24px] text-[#727272] tracking-[0.1px] relative text-center whitespace-nowrap z-[32]">
                 PRICING
               </span>
-              <span className="flex w-full h-[80px] justify-center items-start shrink-0 basis-auto font-['Montserrat'] text-[58px] font-bold leading-[80px] text-[#252b42] tracking-[0.2px] relative text-center whitespace-nowrap z-[33]">
+              {/* Mobilde küçük başlık, webde eski */}
+              <span className="block md:hidden w-full h-[54px] justify-center items-start shrink-0 basis-auto font-['Montserrat'] text-[38px] font-bold leading-[54px] text-[#252b42] tracking-[0.2px] relative text-center whitespace-nowrap z-[33]">
+                Simple Pricing
+              </span>
+              <span className="hidden md:flex w-full h-[80px] justify-center items-start shrink-0 basis-auto font-['Montserrat'] text-[58px] font-bold leading-[80px] text-[#252b42] tracking-[0.2px] relative text-center whitespace-nowrap z-[33]">
                 Simple Pricing
               </span>
               <div className="flex w-[134px] pt-[10px] pr-0 pb-[10px] pl-0 gap-[15px] items-center shrink-0 flex-nowrap relative overflow-hidden z-[34]">
@@ -237,13 +241,14 @@ export default function PricingPage() {
       </div>
 
       {/* Companies Section */}
-      <div className="w-full h-[365px] shrink-0 bg-[#f9f9f9] relative overflow-hidden z-[148]">
+      <div className="w-full h-auto shrink-0 bg-[#f9f9f9] relative overflow-hidden z-[148]">
         <div className="flex w-full max-w-[1050px] px-4 pt-[80px] pr-0 pb-[80px] pl-0 flex-col items-center flex-nowrap relative overflow-hidden z-[149] mx-auto">
           <span className="flex w-full max-w-[385px] h-[30px] justify-center items-start shrink-0 basis-auto font-['Montserrat'] text-[20px] font-normal leading-[30px] text-[#252b42] tracking-[0.2px] relative text-center whitespace-nowrap z-[150]">
             Trusted By Over 4000 Big Companies
           </span>
+          {/* Mobilde alt alta, webde yan yana */}
           <div className="w-full bg-[#FAFAFA] py-12 flex justify-center">
-            <div className="w-[90%] flex flex-row flex-wrap justify-center items-center gap-8 md:gap-12">
+            <div className="w-[90%] flex flex-col md:flex-row flex-wrap justify-center items-center gap-8 md:gap-12">
               {[
                 { src: brand1, alt: "Hooli" },
                 { src: brand2, alt: "Lyft" },
@@ -252,11 +257,11 @@ export default function PricingPage() {
                 { src: brand5, alt: "AWS" },
                 { src: brand6, alt: "Reddit" }
               ].map((logo, i) => (
-                <div key={i} className="flex justify-center items-center mx-4">
+                <div key={i} className="flex justify-center items-center my-2 md:my-0 mx-0 md:mx-4 w-full md:w-auto">
                   <img
                     src={logo.src}
                     alt={logo.alt}
-                    className="h-12 w-auto max-w-[120px] object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 cursor-pointer grayscale hover:grayscale-0"
+                    className="h-12 w-auto max-w-[120px] object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 cursor-pointer grayscale hover:grayscale-0 mx-auto"
                     title={logo.alt}
                   />
                 </div>
@@ -272,33 +277,50 @@ export default function PricingPage() {
           <div className="flex w-full max-w-[1050px] pt-[45px] pr-0 pb-[45px] pl-0 flex-col items-center shrink-0 flex-nowrap relative overflow-hidden z-[166]">
             <div className="flex w-full max-w-[651px] flex-col items-center shrink-0 flex-nowrap relative overflow-hidden z-[167]">
               <div className="flex w-full max-w-[607px] flex-col gap-[10px] items-center shrink-0 flex-nowrap relative overflow-hidden z-[168]">
-                <span className="h-[50px] shrink-0 basis-auto font-['Montserrat'] text-[40px] font-bold leading-[50px] text-[#252b42] tracking-[0.2px] relative text-left whitespace-nowrap z-[169]">
+                {/* Mobilde küçük başlık ve metin, webde eski */}
+                <span className="block md:hidden w-full max-w-[95vw] text-[22px] font-bold leading-[30px] text-[#252b42] tracking-[0.2px] relative text-center break-words z-[169] mb-2">
                   Pricing FAQs
                 </span>
-                <span className="flex w-full max-w-[552px] h-[60px] justify-center items-start shrink-0 font-['Montserrat'] text-[20px] font-normal leading-[30px] text-[#727272] tracking-[0.2px] relative text-center overflow-hidden z-[170]">
+                <span className="block md:hidden w-full max-w-[95vw] text-[14px] font-normal leading-[22px] text-[#727272] tracking-[0.2px] relative text-center break-words z-[170] mb-2">
+                  Problems trying to resolve the conflict between<br/>the two major realms of Classical physics
+                </span>
+                <span className="hidden md:block h-[50px] shrink-0 basis-auto font-['Montserrat'] text-[40px] font-bold leading-[50px] text-[#252b42] tracking-[0.2px] relative text-left whitespace-nowrap z-[169]">
+                  Pricing FAQs
+                </span>
+                <span className="hidden md:flex w-full max-w-[552px] h-[60px] justify-center items-start shrink-0 font-['Montserrat'] text-[20px] font-normal leading-[30px] text-[#727272] tracking-[0.2px] relative text-center overflow-hidden z-[170]">
                   Problems trying to resolve the conflict between <br />
                   the two major realms of Classical physics
                 </span>
               </div>
             </div>
           </div>
-          <div className="flex w-full gap-[30px] items-start shrink-0 flex-wrap md:flex-nowrap justify-center relative z-[171]">
+            <div className="flex w-full gap-[30px] items-start shrink-0 flex-wrap md:flex-nowrap justify-center relative z-[171]">
+              {/* Mobilde FAQ kutuları için özel stil */}
+              <style>{`
+                @media (max-width: 767px) {
+                  .faq-mobile-box { max-width: 95vw !important; word-break: break-word !important; font-size: 13px !important; line-height: 20px !important; }
+                }
+              `}</style>
             {/* Left Column - First 3 FAQs */}
             <div className="flex w-full md:w-1/2 flex-col gap-[30px] items-start shrink-0 flex-nowrap relative z-[172]">
               {faqs.slice(0, 3).map((faq, index) => (
-                <div key={index} className="flex w-full flex-col items-start shrink-0 flex-nowrap relative overflow-hidden z-[173]">
-                  <div className="flex w-full pt-[25px] pr-[25px] pb-[25px] pl-[25px] flex-col items-start shrink-0 flex-nowrap rounded-[9px] relative overflow-hidden z-[174]">
-                    <div className="flex w-full gap-[20px] items-start shrink-0 flex-nowrap relative overflow-hidden z-[175]">
+                <div key={index} className="flex w-full flex-col items-start shrink-0 flex-nowrap relative overflow-hidden z-[173] faq-mobile-box">
+                  <div className="flex w-full pt-[18px] pr-[12px] pb-[18px] pl-[12px] flex-col items-start shrink-0 flex-nowrap rounded-[9px] relative overflow-hidden z-[174] bg-white">
+                    <div className="flex w-full gap-[12px] items-start shrink-0 flex-nowrap relative overflow-hidden z-[175]">
                       <div className="w-[9px] h-[16px] shrink-0 relative overflow-hidden z-[176]">
                         <svg className="w-full h-full" viewBox="0 0 9 16" fill="none">
                           <path d="M0.5 0L8.5 8L0.5 16" stroke="#23A6F0" strokeWidth="2"/>
                         </svg>
                       </div>
                       <div className="flex flex-1 flex-col gap-[5px] items-start shrink-0 flex-nowrap relative z-[177]">
-                        <span className="h-[24px] shrink-0 basis-auto font-['Montserrat'] text-[16px] font-bold leading-[24px] text-[#252b42] tracking-[0.1px] relative text-left whitespace-nowrap z-[178]">
+                        <span className="block md:hidden font-['Montserrat'] text-[13px] font-bold leading-[18px] text-[#252b42] tracking-[0.1px] relative text-left break-words z-[178]">
                           {faq.question}
                         </span>
-                        <span className="flex w-full justify-start items-start shrink-0 font-['Montserrat'] text-[14px] font-normal leading-[20px] text-[#727272] tracking-[0.2px] relative text-left overflow-hidden z-[179]">
+                        {/* Webde başlık ve açıklama hizalaması görseldeki gibi */}
+                        <span className="hidden md:block w-full font-['Montserrat'] text-[16px] font-bold leading-[24px] text-[#252b42] tracking-[0.1px] relative text-left z-[178]">
+                          {faq.question}
+                        </span>
+                        <span className="block md:hidden w-full font-['Montserrat'] text-[13px] font-normal leading-[18px] text-[#727272] tracking-[0.2px] relative text-left break-words z-[179]">
                           {faq.answer.split('. ').map((sentence, i) => (
                             <span key={i}>
                               {sentence}
@@ -306,6 +328,9 @@ export default function PricingPage() {
                               {i < faq.answer.split('. ').length - 1 && <br />}
                             </span>
                           ))}
+                        </span>
+                        <span className="hidden md:block w-full font-['Montserrat'] text-[15px] font-normal leading-[22px] text-[#727272] tracking-[0.2px] relative text-left z-[179]">
+                          {faq.answer}
                         </span>
                       </div>
                     </div>
@@ -317,19 +342,23 @@ export default function PricingPage() {
             {/* Right Column - Last 3 FAQs */}
             <div className="flex w-full md:w-1/2 flex-col gap-[30px] items-start shrink-0 flex-nowrap relative z-[180]">
               {faqs.slice(3, 6).map((faq, index) => (
-                <div key={index} className="flex w-full flex-col items-start shrink-0 flex-nowrap relative overflow-hidden z-[181]">
-                  <div className="flex w-full pt-[25px] pr-[25px] pb-[25px] pl-[25px] flex-col items-start shrink-0 flex-nowrap rounded-[9px] relative overflow-hidden z-[182]">
-                    <div className="flex w-full gap-[20px] items-start shrink-0 flex-nowrap relative overflow-hidden z-[183]">
+                <div key={index} className="flex w-full flex-col items-start shrink-0 flex-nowrap relative overflow-hidden z-[181] faq-mobile-box">
+                  <div className="flex w-full pt-[18px] pr-[12px] pb-[18px] pl-[12px] flex-col items-start shrink-0 flex-nowrap rounded-[9px] relative overflow-hidden z-[182] bg-white">
+                    <div className="flex w-full gap-[12px] items-start shrink-0 flex-nowrap relative overflow-hidden z-[183]">
                       <div className="w-[9px] h-[16px] shrink-0 relative overflow-hidden z-[184]">
                         <svg className="w-full h-full" viewBox="0 0 9 16" fill="none">
                           <path d="M0.5 0L8.5 8L0.5 16" stroke="#23A6F0" strokeWidth="2"/>
                         </svg>
                       </div>
                       <div className="flex flex-1 flex-col gap-[5px] items-start shrink-0 flex-nowrap relative z-[185]">
-                        <span className="h-[24px] shrink-0 basis-auto font-['Montserrat'] text-[16px] font-bold leading-[24px] text-[#252b42] tracking-[0.1px] relative text-left whitespace-nowrap z-[186]">
+                        <span className="block md:hidden font-['Montserrat'] text-[13px] font-bold leading-[18px] text-[#252b42] tracking-[0.1px] relative text-left break-words z-[186]">
                           {faq.question}
                         </span>
-                        <span className="flex w-full justify-start items-start shrink-0 font-['Montserrat'] text-[14px] font-normal leading-[20px] text-[#727272] tracking-[0.2px] relative text-left overflow-hidden z-[187]">
+                        {/* Webde başlık ve açıklama hizalaması görseldeki gibi */}
+                        <span className="hidden md:block w-full font-['Montserrat'] text-[16px] font-bold leading-[24px] text-[#252b42] tracking-[0.1px] relative text-left z-[186]">
+                          {faq.question}
+                        </span>
+                        <span className="block md:hidden w-full font-['Montserrat'] text-[13px] font-normal leading-[18px] text-[#727272] tracking-[0.2px] relative text-left break-words z-[187]">
                           {faq.answer.split('. ').map((sentence, i) => (
                             <span key={i}>
                               {sentence}
@@ -338,6 +367,9 @@ export default function PricingPage() {
                             </span>
                           ))}
                         </span>
+                        <span className="hidden md:block w-full font-['Montserrat'] text-[15px] font-normal leading-[22px] text-[#727272] tracking-[0.2px] relative text-left z-[187]">
+                          {faq.answer}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -345,14 +377,36 @@ export default function PricingPage() {
               ))}
             </div>
           </div>
-          <span className="flex w-full max-w-[552px] h-[30px] justify-center items-start shrink-0 basis-auto font-['Montserrat'] text-[20px] font-normal leading-[30px] text-[#727272] tracking-[0.2px] relative text-center whitespace-nowrap z-[217]">
+          {/* Mobilde küçük, webde eski */}
+          <span className="block md:hidden w-full max-w-[95vw] text-[18px] font-normal leading-[26px] text-[#727272] tracking-[0.2px] relative text-center break-words z-[217] mb-2">
+            Haven't got your answer?<br/><span className="block">Contact our support</span>
+          </span>
+          <span className="hidden md:flex w-full max-w-[552px] h-[30px] justify-center items-start shrink-0 basis-auto font-['Montserrat'] text-[20px] font-normal leading-[30px] text-[#727272] tracking-[0.2px] relative text-center whitespace-nowrap z-[217]">
             Haven't got your answer? Contact our support
           </span>
         </div>
       </div>
 
       {/* CTA Section */}
-      <div className="w-full h-[582px] shrink-0 bg-[#fff] relative overflow-hidden z-[218]">
+      <div className="block md:hidden w-full bg-[#fff] relative overflow-hidden z-[218] py-8">
+        <div className="flex w-full flex-col items-center gap-6 px-4">
+          <span className="w-full max-w-[95vw] text-[22px] font-bold leading-[30px] text-[#252b42] text-center mb-2 break-words">Start your 14 days free trial</span>
+          <span className="w-full max-w-[95vw] text-[13px] font-normal leading-[18px] text-[#727272] text-center mb-3 break-words">Met minim Mollie non desert Alamo est sit cliquey dolor do met sent. RELIT official consequent.</span>
+          <button className="w-full max-w-[220px] h-[42px] px-2 py-2 bg-[#23a6f0] rounded-[5px] text-white font-bold text-[15px] leading-[22px] hover:bg-[#1a8cd8] transition-colors focus:outline-none mb-2">Try it free now</button>
+          <div className="flex w-full justify-center gap-5 mt-2">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <Twitter className="w-6 h-6 text-[#23a6f0] hover:text-[#1a8cd8] transition-colors cursor-pointer" />
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <Facebook className="w-6 h-6 text-[#23a6f0] hover:text-[#1a8cd8] transition-colors cursor-pointer" />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <Instagram className="w-6 h-6 text-[#23a6f0] hover:text-[#1a8cd8] transition-colors cursor-pointer" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="hidden md:block w-full h-[582px] shrink-0 bg-[#fff] relative overflow-hidden z-[218]">
         <div className="flex w-full max-w-[1050px] px-4 pt-[160px] pr-0 pb-[160px] pl-0 flex-col gap-[96px] items-center flex-nowrap relative overflow-hidden z-[219] mx-auto">
           <div className="flex w-full flex-col gap-[36px] items-center shrink-0 flex-nowrap relative z-[220]">
             <div className="flex w-full flex-col gap-[30px] items-center shrink-0 flex-nowrap relative overflow-hidden z-[221]">
