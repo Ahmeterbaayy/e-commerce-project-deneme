@@ -42,21 +42,23 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section */}
-      <div className="w-full h-[729px] shrink-0 bg-[#fff] relative overflow-hidden">
-        <div className="flex w-full max-w-[1050px] pt-[112px] pr-0 pb-[112px] pl-0 md:pl-0 flex-col gap-[80px] items-start flex-nowrap relative overflow-hidden z-[31] mt-[13px] mx-auto" style={{marginLeft: '180px'}}>
-          <div className="flex w-full gap-[30px] items-center shrink-0 flex-wrap relative overflow-hidden z-[32]">
-            <div className="flex w-full md:w-[599px] flex-col gap-[35px] items-start shrink-0 flex-nowrap relative overflow-hidden z-[33]">
+      <div className="w-full min-h-[400px] md:h-[729px] shrink-0 bg-[#fff] relative overflow-hidden">
+        {/* Mobil görünüm */}
+        <div className="block md:hidden w-full max-w-[1050px] pt-[40px] pr-0 pb-[40px] pl-0 flex-col gap-[40px] items-center flex-nowrap relative overflow-hidden z-[31] mt-[0] mx-auto">
+          <div className="flex flex-col w-full gap-[20px] items-center shrink-0 flex-nowrap relative overflow-hidden z-[32]">
+            <div className="flex w-full flex-col gap-[20px] items-center shrink-0 flex-nowrap relative overflow-hidden z-[33]">
               <span className="h-[24px] shrink-0 basis-auto font-['Montserrat'] text-[16px] font-bold leading-[24px] text-[#252b42] tracking-[0.1px] relative text-left whitespace-nowrap z-[34]">
                 ABOUT COMPANY
               </span>
-              <span className="flex w-full max-w-[542px] h-[80px] justify-start items-start shrink-0 basis-auto font-['Montserrat'] text-[58px] font-bold leading-[80px] text-[#252b42] tracking-[0.2px] relative text-left whitespace-nowrap z-[35]">
+              <span className="w-full justify-center items-center shrink-0 font-['Montserrat'] text-[32px] font-bold leading-[40px] text-[#252b42] tracking-[0.2px] relative text-center z-[35] mb-2">
                 ABOUT US
               </span>
-              <span className="flex w-full max-w-[376px] h-[60px] justify-start items-start shrink-0 font-['Montserrat'] text-[20px] font-normal leading-[30px] text-[#727272] tracking-[0.2px] relative text-left overflow-hidden z-[36]">
-                We know how large objects will act, <br />
-                but things on a small scale
+              <span className="flex w-[376px] h-auto justify-start items-start shrink-0 font-['Montserrat'] text-[20px] font-normal leading-[30px] text-[#727272] tracking-[0.2px] relative text-left overflow-hidden z-[36]">
+                <span className="text-center w-full">
+                  We know how large <br />objects will act, but things <br />on a small scale
+                </span>
               </span>
-              <div className="flex w-[193px] gap-[10px] items-start shrink-0 flex-nowrap relative z-[37]">
+              <div className="flex w-full justify-center">
                 <button
                   className="flex w-[193px] pt-[15px] pr-[40px] pb-[15px] pl-[40px] flex-col gap-[10px] items-center shrink-0 flex-nowrap bg-[#23a6f0] rounded-[5px] relative overflow-hidden z-[38] hover:bg-[#1a8cd8] transition-colors focus:outline-none"
                   type="button"
@@ -66,21 +68,67 @@ export default function AboutPage() {
                   </span>
                 </button>
               </div>
+              <div className="flex w-full justify-center items-center mt-4">
+                <img src={aboutBanner} alt="about banner" className="max-w-[90vw] w-[256px] h-auto mx-auto rounded-xl object-contain" style={{display:'block', marginTop:'0'}} />
+              </div>
             </div>
-            <div className="flex w-full md:w-[415px] h-[280px] pt-0 pr-0 pb-0 pl-0 flex-col items-start shrink-0 flex-nowrap relative overflow-hidden z-40 md:ml-[-120px] md:mr-[-10px]" />
           </div>
         </div>
-        <div className="absolute top-0 bottom-0 left-0 right-0 z-[1]">
-          <div className="w-full h-[700px] relative z-[2] mt-0 mr-0 mb-0 ml-0">
-            <img src={aboutBanner} alt="about banner" className="w-[632px] h-[612px] object-cover relative z-[3] mt-[117px] mr-0 mb-0 md:ml-[900px]" />
+        {/* Web (md ve üstü) görünüm */}
+        <div className="hidden md:block w-full h-[729px] shrink-0 bg-[#fff] relative overflow-hidden">
+          <div className="flex w-full max-w-[1050px] pt-[112px] pr-0 pb-[112px] pl-0 flex-col gap-[80px] items-start flex-nowrap relative overflow-hidden z-[31] mt-[13px] mx-auto" style={{marginLeft: '180px'}}>
+            <div className="flex w-full gap-[30px] items-center shrink-0 flex-wrap relative overflow-hidden z-[32]">
+              <div className="flex w-full md:w-[599px] flex-col gap-[35px] items-start shrink-0 flex-nowrap relative overflow-hidden z-[33]">
+                <span className="h-[24px] shrink-0 basis-auto font-['Montserrat'] text-[16px] font-bold leading-[24px] text-[#252b42] tracking-[0.1px] relative text-left whitespace-nowrap z-[34]">
+                  ABOUT COMPANY
+                </span>
+                <span className="flex w-full max-w-[542px] h-[80px] justify-start items-start shrink-0 basis-auto font-['Montserrat'] text-[58px] font-bold leading-[80px] text-[#252b42] tracking-[0.2px] relative text-left whitespace-nowrap z-[35]">
+                  ABOUT US
+                </span>
+                <span className="flex w-full max-w-[376px] h-[60px] justify-start items-start shrink-0 font-['Montserrat'] text-[20px] font-normal leading-[30px] text-[#727272] tracking-[0.2px] relative text-left overflow-hidden z-[36]">
+                  We know how large objects will act, <br />
+                  but things on a small scale
+                </span>
+                <div className="flex w-[193px] md:w-[260px] gap-[10px] items-start shrink-0 flex-nowrap relative z-[37]">
+                  <button
+                    className="flex w-[193px] md:w-[260px] pt-[15px] md:pt-[24px] pr-[40px] md:pr-[56px] pb-[15px] md:pb-[24px] pl-[40px] md:pl-[56px] flex-col gap-[10px] items-center shrink-0 flex-nowrap bg-[#23a6f0] rounded-[8px] relative overflow-hidden z-[38] hover:bg-[#1a8cd8] transition-colors focus:outline-none"
+                    type="button"
+                  >
+                    <span className="flex w-[113px] md:w-[160px] h-[22px] md:h-[32px] justify-center items-start shrink-0 basis-auto font-['Montserrat'] text-[14px] md:text-[20px] font-bold leading-[22px] md:leading-[32px] text-[#fff] tracking-[0.2px] relative text-center whitespace-nowrap z-[39]">
+                      Get Quote Now
+                    </span>
+                  </button>
+                </div>
+              </div>
+              {/* Web görünümünde sağda küçük görsel kaldırıldı */}
+            </div>
           </div>
-          <div className="absolute top-0 bottom-0 left-0 right-0 overflow-hidden z-[4]" />
+          <div className="absolute top-0 bottom-0 left-0 right-0 z-[1]">
+            <div className="w-full h-[700px] relative z-[2] mt-0 mr-0 mb-0 ml-0">
+              <img src={aboutBanner} alt="about banner" className="w-[632px] h-[612px] object-cover relative z-[3] mt-[60px] mr-0 mb-0 md:ml-[900px]" />
+            </div>
+            <div className="absolute top-0 bottom-0 left-0 right-0 overflow-hidden z-[4]" />
+          </div>
         </div>
       </div>
 
       {/* Problems Section */}
-      <div className="w-full h-[236px] shrink-0 bg-[#fff] relative overflow-hidden z-[41]">
-        <div className="flex w-full h-[236px] pt-[24px] pr-0 pb-[24px] pl-0 flex-col items-center flex-nowrap overflow-hidden z-[42]">
+      <div className="w-full min-h-[236px] h-auto shrink-0 bg-[#fff] relative overflow-hidden z-[41]">
+        {/* Mobil görünüm */}
+        <div className="block md:hidden w-full h-full pt-8 pb-8 flex flex-col items-center justify-center text-center">
+          <span className="text-[#e64040] text-[14px] font-normal leading-[20px] font-['Montserrat'] mb-4">Problems trying</span>
+          <span className="text-[#252b42] text-[24px] font-bold leading-[32px] font-['Montserrat'] mb-6 max-w-[90vw]">
+            <span className="block">Met minim Mollie non</span>
+            <span className="block">desert Alamo est sit</span>
+            <span className="block">cliquey dolor do met</span>
+            <span className="block">sent.</span>
+          </span>
+          <span className="text-[#727272] text-[14px] font-normal leading-[20px] font-['Montserrat'] max-w-[90vw]">
+            Problems trying to resolve the conflict bet<br />the two major realms of Classical physics:<br />Newtonian mechanics
+          </span>
+        </div>
+        {/* Web görünüm */}
+        <div className="hidden md:flex w-full h-[236px] pt-[24px] pr-0 pb-[24px] pl-0 flex-col items-center flex-nowrap overflow-hidden z-[42]">
           <div className="flex w-full max-w-[1018px] px-4 gap-[60px] justify-center items-center shrink-0 flex-wrap relative z-[43]">
             <div className="flex w-full md:w-[394px] pt-[24px] pr-0 pb-[24px] pl-0 flex-col gap-[80px] items-start shrink-0 flex-nowrap relative z-[44]">
               <div className="flex w-full flex-col gap-[24px] items-start shrink-0 flex-nowrap relative z-[45]">
@@ -104,8 +152,28 @@ export default function AboutPage() {
       </div>
 
       {/* Stats Section */}
-      <div className="w-full h-[264px] shrink-0 bg-[#fff] relative overflow-hidden z-50">
-        <div className="flex w-full max-w-[1050px] px-4 pt-[80px] pr-0 pb-[80px] pl-0 flex-col gap-[50px] items-center flex-nowrap relative z-[51] mx-auto">
+      <div className="w-full min-h-[264px] h-auto shrink-0 bg-[#fff] relative overflow-hidden z-50">
+        {/* Mobil görünüm */}
+        <div className="block md:hidden w-full max-w-[1050px] px-4 pt-24 pb-10 flex flex-col items-center justify-center gap-12 mx-auto min-h-[340px]">
+          <div className="flex flex-col items-center mb-10">
+            <span className="text-[48px] font-bold leading-[56px] text-[#252b42]">15K</span>
+            <span className="text-[20px] font-bold text-[#727272]">Happy Customers</span>
+          </div>
+          <div className="flex flex-col items-center mb-10">
+            <span className="text-[48px] font-bold leading-[56px] text-[#252b42]">150K</span>
+            <span className="text-[20px] font-bold text-[#727272]">Monthly Visitors</span>
+          </div>
+          <div className="flex flex-col items-center mb-10">
+            <span className="text-[48px] font-bold leading-[56px] text-[#252b42]">15</span>
+            <span className="text-[20px] font-bold text-[#727272]">Countries Worldwide</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <span className="text-[48px] font-bold leading-[56px] text-[#252b42]">100+</span>
+            <span className="text-[20px] font-bold text-[#727272]">Top Partners</span>
+          </div>
+        </div>
+        {/* Web görünüm */}
+        <div className="hidden md:flex w-full max-w-[1050px] px-4 pt-[80px] pr-0 pb-[80px] pl-0 flex-col gap-[50px] items-center flex-nowrap relative z-[51] mx-auto">
           <div className="flex w-full gap-[30px] items-start shrink-0 flex-wrap justify-center relative z-[52]">
             <div className="flex w-full md:w-[238px] flex-col items-center shrink-0 flex-nowrap relative z-[53]">
               <span className="flex w-[100px] h-[80px] justify-center items-start shrink-0 basis-auto font-['Montserrat'] text-[58px] font-bold leading-[80px] text-[#252b42] tracking-[0.2px] relative text-center whitespace-nowrap z-[54]">
@@ -149,9 +217,17 @@ export default function AboutPage() {
       </div>
 
       {/* Team Section */}
-      <div className="w-full h-[826px] shrink-0 bg-[#fff] relative overflow-hidden z-[73]">
-        <div className="flex w-full max-w-[1050px] px-4 pt-[112px] pr-0 pb-[112px] pl-0 flex-col gap-[112px] items-center flex-nowrap relative overflow-hidden z-[74] mx-auto">
-          <div className="flex w-full max-w-[607px] flex-col items-center shrink-0 flex-nowrap relative overflow-hidden z-[75]">
+      <div className="w-full min-h-[826px] h-auto shrink-0 bg-[#fff] relative overflow-hidden z-[73]">
+        <div className="flex w-full max-w-[1050px] px-4 pt-[40px] md:pt-[112px] pr-0 pb-[40px] md:pb-[112px] pl-0 flex-col gap-[40px] md:gap-[112px] items-center flex-nowrap relative overflow-hidden z-[74] mx-auto">
+          {/* Mobil başlık ve açıklama */}
+          <div className="block md:hidden w-full flex flex-col items-center mb-6">
+            <span className="text-[32px] font-bold leading-[40px] text-[#252b42] text-center mb-4">Meet Our<br/>Team</span>
+            <span className="text-[15px] font-normal leading-[22px] text-[#727272] text-center max-w-[320px]">
+              Problems trying to resolve<br />the conflict between the two major<br />realms of Classical physics:<br />Newtonian mechanics
+            </span>
+          </div>
+          {/* Web başlık ve açıklama */}
+          <div className="hidden md:flex w-full max-w-[607px] flex-col items-center shrink-0 flex-nowrap relative overflow-hidden z-[75]">
             <div className="flex w-full flex-col gap-[10px] items-center shrink-0 flex-nowrap relative overflow-hidden z-[76]">
               <span className="h-[50px] shrink-0 basis-auto font-['Montserrat'] text-[40px] font-bold leading-[50px] text-[#252b42] tracking-[0.2px] relative text-left whitespace-nowrap z-[77]">
                 Meet Our Team
@@ -191,7 +267,23 @@ export default function AboutPage() {
       </div>
 
       {/* Companies Section */}
-      <div className="w-full h-[479px] shrink-0 bg-[#f9f9f9] relative overflow-hidden z-[122]">
+      {/* Mobilde özel hizalama ve başlık */}
+      <div className="block md:hidden w-full bg-[#f9f9f9] pt-12 pb-4 flex flex-col items-center">
+        <span className="text-[32px] font-bold leading-[40px] text-[#252b42] text-center mb-2">Big<br/>Companies<br/>Are Here</span>
+        <span className="text-[15px] font-normal leading-[22px] text-[#727272] text-center max-w-[320px] mb-8">
+          Problems trying to resolve the conflict<br />between the two major realms of Classical<br />physics: Newtonian mechanics
+        </span>
+        <div className="flex flex-col items-center gap-8 w-full">
+          <img src={brand1} alt="Hooli" className="w-[140px] h-auto" />
+          <img src={brand2} alt="Lyft" className="w-[140px] h-auto" />
+          <img src={brand3} alt="Robinhood" className="w-[140px] h-auto" />
+          <img src={brand4} alt="Stripe" className="w-[140px] h-auto" />
+          <img src={brand5} alt="AWS" className="w-[140px] h-auto" />
+          <img src={brand6} alt="Reddit" className="w-[140px] h-auto" />
+        </div>
+      </div>
+      {/* Webde mevcut companies bölümü */}
+      <div className="hidden md:block w-full h-[479px] shrink-0 bg-[#f9f9f9] relative overflow-hidden z-[122]">
         <div className="flex w-full max-w-[1050px] px-4 pt-[80px] pr-0 pb-[80px] pl-0 flex-col gap-[24px] items-center flex-nowrap relative overflow-hidden z-[123] mx-auto">
           <div className="flex w-full max-w-[864px] flex-col items-center shrink-0 flex-nowrap relative overflow-hidden z-[124]">
             <div className="flex w-full flex-col gap-[30px] items-center shrink-0 flex-nowrap relative overflow-hidden z-[125]">
@@ -229,7 +321,19 @@ export default function AboutPage() {
       </div>
 
       {/* Work With Us Section */}
-      <div className="w-full h-[636px] shrink-0 bg-[#2a7bc6] relative overflow-hidden z-[141]">
+      {/* Mobilde özel hizalama ve kadın görseli olmadan */}
+      <div className="block md:hidden w-full bg-[#2a7bc6] py-12 flex flex-col items-center">
+        <span className="text-[15px] font-bold leading-[24px] text-white text-center mb-4 tracking-wide">WORK WITH US</span>
+        <span className="text-[32px] font-bold leading-[40px] text-white text-center mb-4">Now Let’s<br/>grow Yours</span>
+        <span className="text-[15px] font-normal leading-[22px] text-white text-center max-w-[320px] mb-8">
+          The gradual accumulation of information about atomic and<br />small-scale behavior during the first quarter of the 20th
+        </span>
+        <button className="mt-2 px-8 py-3 border border-white rounded text-white font-bold hover:bg-white hover:text-[#2a7bc6] transition-colors" type="button">
+          Button
+        </button>
+      </div>
+      {/* Webde mevcut Work With Us bölümü */}
+      <div className="hidden md:block w-full h-[636px] shrink-0 bg-[#2a7bc6] relative overflow-hidden z-[141]">
         <div className="flex w-full max-w-[1050px] px-4 pt-[112px] pr-0 pb-[112px] pl-0 flex-col items-start flex-nowrap relative overflow-hidden z-[144] mx-auto">
           <div className="flex w-full justify-between items-center shrink-0 flex-wrap relative overflow-hidden z-[145]">
             <div className="flex w-full md:w-[500px] flex-col gap-[24px] items-start shrink-0 flex-nowrap relative overflow-visible z-[146]">
