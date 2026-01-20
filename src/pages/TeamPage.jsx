@@ -63,8 +63,22 @@ export default function TeamPage() {
           <div className="bg-[rgba(255,255,255,0.5)] absolute top-0 bottom-0 left-0 right-0 overflow-hidden z-[2]" />
         </div>
 
-        {/* Hero section yukarı alındı, boşluk azaltıldı */}
-        <div className="flex w-full max-w-[1000px] h-[220px] pt-[20px] pr-0 pb-[20px] pl-0 flex-col items-center flex-nowrap absolute top-[40px] left-1/2 translate-x-[-50%] translate-y-0 z-[29]">
+        {/* Mobilde hero başlık görseldeki gibi */}
+        <div className="block md:hidden w-full pt-8 pb-2 flex flex-col items-center justify-center text-center relative z-[29]">
+          <span className="text-[#727272] text-[15px] font-bold mb-2 tracking-wide">WHAT WE DO</span>
+          <span className="text-[#252b42] text-[32px] font-extrabold leading-[38px] mb-4 block">
+            Innovation<br/>tailored for you
+          </span>
+          <div className="flex items-center justify-center gap-2">
+            <span className="text-[#252b42] text-[15px] font-extrabold">Home</span>
+            <svg className="w-[9px] h-[16px]" viewBox="0 0 9 16" fill="none">
+              <path d="M0.5 0L8.5 8L0.5 16" stroke="#BDBDBD" strokeWidth="2"/>
+            </svg>
+            <span className="text-[#727272] text-[15px] font-bold">Team</span>
+          </div>
+        </div>
+        {/* Webde hero başlık */}
+        <div className="hidden md:flex w-full max-w-[1000px] h-[220px] pt-[20px] pr-0 pb-[20px] pl-0 flex-col items-center flex-nowrap absolute top-[40px] left-1/2 translate-x-[-50%] translate-y-0 z-[29]">
           <div className="flex w-full items-center shrink-0 flex-nowrap relative z-30">
             <div className="flex w-full flex-col gap-[16px] items-center shrink-0 flex-nowrap relative z-[31]">
               <span className="flex w-[111px] h-[24px] justify-center items-start shrink-0 basis-auto font-['Montserrat'] text-[16px] font-bold leading-[24px] text-[#727272] tracking-[0.1px] relative text-center whitespace-nowrap z-[32]">
@@ -91,8 +105,22 @@ export default function TeamPage() {
         </div>
       </div>
 
-      {/* Image Gallery Section */}
-      <div className="w-full h-[530px] shrink-0 bg-[#fff] relative overflow-hidden z-[38]">
+      {/* Mobilde görsel galerisi */}
+      <div className="block md:hidden w-full bg-[#fff] relative overflow-hidden z-[38] py-6">
+        {/* Üstte büyük görsel */}
+        <div className="w-full flex justify-center mb-0">
+          <img src="/src/assets/images/teamPage-img/teamleft.jpg" alt="Main" className="w-[90vw] max-w-[400px] h-auto rounded-lg object-cover" />
+        </div>
+        {/* Altta 2x2 grid küçük görseller */}
+        <div className="grid grid-cols-2 gap-3 px-4">
+          <img src="/src/assets/images/teamPage-img/teamright1.jpg" alt="Alt1" className="w-full h-[120px] object-cover rounded-lg" />
+          <img src="/src/assets/images/teamPage-img/teamright2.jpg" alt="Alt2" className="w-full h-[120px] object-cover rounded-lg" />
+          <img src="/src/assets/images/teamPage-img/teamright3.jpg" alt="Alt3" className="w-full h-[120px] object-cover rounded-lg" />
+          <img src="/src/assets/images/teamPage-img/teamright4.jpg" alt="Alt4" className="w-full h-[120px] object-cover rounded-lg" />
+        </div>
+      </div>
+      {/* Webde mevcut image gallery */}
+      <div className="hidden md:block w-full h-[530px] shrink-0 bg-[#fff] relative overflow-hidden z-[38]">
         <div className="h-[530px] absolute top-0 left-0 right-0 overflow-hidden z-[39]">
           <div className="w-[1440px] h-[530px] absolute top-0 left-1/2 translate-x-[-50%] overflow-hidden z-40">
             <div className="w-[700px] h-[530px] bg-[url(/src/assets/images/teamPage-img/teamleft.jpg)] bg-cover bg-no-repeat absolute top-0 left-0 z-[41] transition-all duration-300 hover:shadow-2xl hover:scale-105 active:shadow-2xl active:scale-100 focus:shadow-2xl focus:scale-100 cursor-pointer outline-none" tabIndex={0} />
@@ -105,7 +133,28 @@ export default function TeamPage() {
       </div>
 
       {/* Team Members Section */}
-      <div className="w-full shrink-0 bg-[#fff] relative overflow-hidden z-[46] py-[112px]">
+      {/* Mobilde üstten aşağı tek kolon ve ortalanmış */}
+      <div className="block md:hidden w-full bg-[#fff] relative overflow-hidden z-[46] py-8">
+        <div className="flex w-full max-w-[400px] px-4 flex-col gap-12 items-center flex-nowrap relative overflow-hidden z-[47] mx-auto">
+          <span className="text-[32px] font-bold leading-[40px] text-[#252b42] text-center mb-4">Meet Our<br/>Team</span>
+          {teamMembers.map((member, index) => (
+            <div key={index} className="flex w-full flex-col items-center bg-[#fff] rounded-lg shadow mb-8">
+              <div className="w-full h-[220px] bg-cover bg-center rounded-t-lg" style={{backgroundImage: `url(${member.image})`}} />
+              <div className="flex flex-col items-center gap-2 py-4">
+                <span className="text-[18px] font-bold text-[#252b42]">{member.name}</span>
+                <span className="text-[15px] font-normal text-[#727272]">{member.profession}</span>
+                <div className="flex gap-4 mt-2">
+                  <a href="#" tabIndex={-1}><Facebook className="w-6 h-6 text-[#23a6f0]" /></a>
+                  <a href="#" tabIndex={-1}><Instagram className="w-6 h-6 text-[#23a6f0]" /></a>
+                  <a href="#" tabIndex={-1}><Twitter className="w-6 h-6 text-[#23a6f0]" /></a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* Webde mevcut grid */}
+      <div className="hidden md:block w-full shrink-0 bg-[#fff] relative overflow-hidden z-[46] py-[112px]">
         <div className="flex w-full max-w-[1050px] px-4 flex-col gap-[112px] items-center flex-nowrap relative overflow-hidden z-[47] mx-auto">
           {/* Section Title */}
           <div className="flex w-full max-w-[607px] flex-col items-center shrink-0 flex-nowrap relative overflow-hidden z-[48]">
@@ -115,7 +164,6 @@ export default function TeamPage() {
               </span>
             </div>
           </div>
-
           {/* Team Grid - Dynamic Hover Cards */}
           <div className="flex w-full max-w-[1034px] gap-[30px] items-center shrink-0 flex-wrap justify-center relative overflow-hidden z-[51]">
             {teamMembers.map((member, index) => (
@@ -142,13 +190,33 @@ export default function TeamPage() {
               </div>
             ))}
           </div>
-
-          {/* ...statik gridler kaldırıldı... */}
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="w-full h-[442px] shrink-0 bg-[#fff] relative overflow-hidden z-[180]">
+      {/* Mobilde CTA Section */}
+      <div className="block md:hidden w-full bg-[#fff] relative overflow-hidden z-[180] py-8">
+        <div className="flex w-full flex-col items-center gap-6 px-4">
+          <span className="text-[22px] font-bold leading-[28px] text-[#252b42] text-center mb-2">Start your 14 days free trial</span>
+          <span className="text-[13px] font-normal leading-[18px] text-[#727272] text-center mb-3">Met minim Mollie non desert Alamo est sit cliquey dolor do met sent. RELIT official consequent.</span>
+          <button className="w-full max-w-[220px] h-[42px] px-2 py-2 bg-[#23a6f0] rounded-[5px] text-white font-bold text-[15px] leading-[22px] hover:bg-[#1a8cd8] transition-colors focus:outline-none mb-2">Try it free now</button>
+          <div className="flex w-full justify-center gap-5 mt-2">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <Twitter className="w-6 h-6 text-[#23a6f0] hover:text-[#1a8cd8] transition-colors cursor-pointer" />
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <Facebook className="w-6 h-6 text-[#23a6f0] hover:text-[#1a8cd8] transition-colors cursor-pointer" />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <Instagram className="w-6 h-6 text-[#23a6f0] hover:text-[#1a8cd8] transition-colors cursor-pointer" />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <Linkedin className="w-6 h-6 text-[#23a6f0] hover:text-[#1a8cd8] transition-colors cursor-pointer" />
+            </a>
+          </div>
+        </div>
+      </div>
+      {/* Webde CTA Section */}
+      <div className="hidden md:block w-full h-[442px] shrink-0 bg-[#fff] relative overflow-hidden z-[180]">
         <div className="flex w-full pt-[80px] pr-0 pb-[80px] pl-0 flex-col gap-[96px] items-center flex-nowrap relative z-[181] mt-0 mr-0 mb-0 ml-0">
           <div className="flex w-full max-w-[800px] flex-col gap-[36px] items-center shrink-0 flex-nowrap relative z-[182]">
             <div className="flex w-full flex-col gap-[30px] items-center shrink-0 flex-nowrap relative z-[183]">
