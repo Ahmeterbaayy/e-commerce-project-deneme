@@ -110,17 +110,7 @@ export default function LoginPage() {
                 </label>
               </div>
 
-              {/* Test Credentials Info */}
-              <div className="bg-[#f0f9ff] border border-[#23a6f0] rounded-[5px] p-[15px]">
-                <p className="font-['Montserrat'] text-[12px] font-bold text-[#252b42] mb-[5px]">
-                  Test Credentials (Password: 123456):
-                </p>
-                <ul className="font-['Montserrat'] text-[12px] text-[#727272] list-disc list-inside">
-                  <li>customer@commerce.com</li>
-                  <li>store@commerce.com</li>
-                  <li>admin@commerce.com</li>
-                </ul>
-              </div>
+
 
               {/* Submit Button */}
               <button

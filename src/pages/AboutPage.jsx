@@ -9,7 +9,7 @@ import aboutBanner from "../assets/images/aboutPage-img/about-banner.png";
 import videoCard from "../assets/images/aboutPage-img/Video card.png";
 import team1 from "../assets/images/teamPage-img/personal6.jpg";
 import team2 from "../assets/images/teamPage-img/personal7.jpg";
-import team3 from "../assets/images/teamPage-img/myPhoto.jpeg";
+import team3 from "../assets/images/teamPage-img/personal4.jpg";
 import brand1 from "../assets/images/brands-img/brand1.png";
 import brand2 from "../assets/images/brands-img/brand2.png";
 import brand3 from "../assets/images/brands-img/brand3.png";
