@@ -5,9 +5,11 @@ import Footer from "../layout/Footer";
 import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 // Görselleri import et
 import personal1 from "../assets/images/teamPage-img/personal1.jpg";
+// LinkedIn profil görseli doğrudan import edilemiyorsa, dış link olarak kullanılacak
 import personal2 from "../assets/images/teamPage-img/personal2.jpg";
 import personal3 from "../assets/images/teamPage-img/personal3.jpg";
-import personal4 from "../assets/images/teamPage-img/personal4.jpg";
+import myPhoto from "../assets/images/teamPage-img/myPhoto.jpeg";
+import gokhanOzdemir from "../assets/images/teamPage-img/gokhan-ozdemir.jpg";
 import personal5 from "../assets/images/teamPage-img/personal5.jpg";
 import personal6 from "../assets/images/teamPage-img/personal6.jpg";
 import personal7 from "../assets/images/teamPage-img/personal7.jpg";
@@ -22,48 +24,53 @@ import teamright4 from "../assets/images/teamPage-img/teamright4.jpg";
 export default function TeamPage() {
   const teamMembers = [
     {
-      name: "Username",
-      profession: "Profession",
+      name: "Yalçın Kaya",
+      profession: "Project Manager",
+      image: gokhanOzdemir
+    },
+    {
+      name: "Ahmet Faruk Erbay",
+      profession: "Full Stack Developer",
+      image: myPhoto
+    },
+    {
+      name: "Üye 1",
+      profession: "Frontend Developer",
       image: personal1
     },
     {
-      name: "Username",
-      profession: "Profession",
+      name: "Üye 2",
+      profession: "Backend Developer",
       image: personal2
     },
     {
-      name: "Username",
-      profession: "Profession",
+      name: "Üye 3",
+      profession: "UI/UX Designer",
       image: personal3
     },
     {
-      name: "Username",
-      profession: "Profession", 
-      image: personal4
-    },
-    {
-      name: "Username",
-      profession: "Profession",
+      name: "Üye 4",
+      profession: "Mobile Developer",
       image: personal5
     },
     {
-      name: "Username",
-      profession: "Profession",
+      name: "Üye 5",
+      profession: "QA Engineer",
       image: personal6
     },
     {
-      name: "Username",
-      profession: "Profession",
+      name: "Üye 6",
+      profession: "DevOps Engineer",
       image: personal7
     },
     {
-      name: "Username",
-      profession: "Profession",
+      name: "Üye 7",
+      profession: "Support Specialist",
       image: personal8
     },
     {
-      name: "Username",
-      profession: "Profession",
+      name: "Üye 8",
+      profession: "Business Analyst",
       image: personal9
     }
   ];
